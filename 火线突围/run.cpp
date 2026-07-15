@@ -15,18 +15,18 @@ Run::Run()
 
 	region_btn_start_game.left = (WINDOW_WIDTH - BUTTON_WIDTH) / 2;
 	region_btn_start_game.right = region_btn_start_game.left + BUTTON_WIDTH;
-	region_btn_start_game.top = 430;
+	region_btn_start_game.top = 380;
 	region_btn_start_game.bottom = region_btn_start_game.top + BUTTON_HEIGHT;
+
+	region_btn_settings.left = (WINDOW_WIDTH - BUTTON_WIDTH) / 2;
+	region_btn_settings.right = region_btn_settings.left + BUTTON_WIDTH;
+	region_btn_settings.top = 490;
+	region_btn_settings.bottom = region_btn_settings.top + BUTTON_HEIGHT;
 
 	region_btn_quit_game.left = (WINDOW_WIDTH - BUTTON_WIDTH) / 2;
 	region_btn_quit_game.right = region_btn_quit_game.left + BUTTON_WIDTH;
-	region_btn_quit_game.top = 560;
+	region_btn_quit_game.top = 600;
 	region_btn_quit_game.bottom = region_btn_quit_game.top + BUTTON_HEIGHT;
-
-	region_btn_settings.left = WINDOW_WIDTH - BUTTON_WIDTH - 30;
-	region_btn_settings.right = region_btn_settings.left + BUTTON_WIDTH;
-	region_btn_settings.top = WINDOW_HEIGHT - BUTTON_HEIGHT - 30;
-	region_btn_settings.bottom = region_btn_settings.top + BUTTON_HEIGHT;
 
 	region_btn_back.left = (WINDOW_WIDTH - BUTTON_WIDTH) / 2;
 	region_btn_back.right = region_btn_back.left + BUTTON_WIDTH;
@@ -165,7 +165,7 @@ void Run::UpdateGameLogic()
 
 void Run::HandleGameOver()
 {
-	MessageBox(GetHWnd(), _T("Code:3"), _T("游戏结束"), MB_OK);
+	MessageBox(GetHWnd(), _T("Code:3"), _T("Game over!"), MB_OK);
 	is_game_started = false;
 	for (auto e : enemy_list)
 	{
