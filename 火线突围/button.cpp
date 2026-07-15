@@ -85,3 +85,23 @@ void QuitGameButton::OnClick()
 {
 	running = false;
 }
+
+SettingsButton::SettingsButton(RECT rect, LPCTSTR path_img_idle, LPCTSTR path_img_hovered, LPCTSTR path_img_pushed)
+	: Button(rect, path_img_idle, path_img_hovered, path_img_pushed)
+{
+}
+
+void SettingsButton::OnClick()
+{
+	is_in_settings = true;
+}
+
+BackButton::BackButton(RECT rect, LPCTSTR path_img_idle, LPCTSTR path_img_hovered, LPCTSTR path_img_pushed)
+	: Button(rect, path_img_idle, path_img_hovered, path_img_pushed)
+{
+}
+
+void BackButton::OnClick()
+{
+	is_in_settings = false;
+}

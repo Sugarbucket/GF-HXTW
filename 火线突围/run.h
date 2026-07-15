@@ -19,6 +19,7 @@ public:
 private:
 	void TryGenerateEnemy();
 	void DrawPlayerScore();
+	void DrawSettingsPage();
 	void ProcessEvents(ExMessage& msg);
 	void UpdateGameLogic();
 	void RenderGame();
@@ -33,6 +34,10 @@ private:
 
 	RECT region_btn_start_game;
 	RECT region_btn_quit_game;
+	RECT region_btn_settings;
+	RECT region_btn_back;
 	StartGameButton* btn_start_game = nullptr;
 	QuitGameButton* btn_quit_game = nullptr;
+	SettingsButton* btn_settings = nullptr;
+	BackButton* btn_back = nullptr;
 };

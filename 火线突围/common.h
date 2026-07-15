@@ -16,7 +16,9 @@ extern const int BUTTON_WIDTH;
 extern const int BUTTON_HEIGHT;
 extern int idx_current_anim;
 extern bool is_game_started;
+extern bool is_in_settings;
 extern bool running;
+extern int bgm_volume;
 
 inline void putimage_alpha(int x, int y, IMAGE* img)
 {

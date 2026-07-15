@@ -50,3 +50,23 @@ public:
 protected:
 	void OnClick() override;
 };
+
+class SettingsButton : public Button
+{
+public:
+	SettingsButton(RECT rect, LPCTSTR path_img_idle, LPCTSTR path_img_hovered, LPCTSTR path_img_pushed);
+	~SettingsButton() = default;
+
+protected:
+	void OnClick() override;
+};
+
+class BackButton : public Button
+{
+public:
+	BackButton(RECT rect, LPCTSTR path_img_idle, LPCTSTR path_img_hovered, LPCTSTR path_img_pushed);
+	~BackButton() = default;
+
+protected:
+	void OnClick() override;
+};
